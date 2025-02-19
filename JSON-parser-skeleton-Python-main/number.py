@@ -49,8 +49,8 @@ for x in content_list:
         passed_test_cases_true_positive.append(x_list[0])
 #Checking the Results
 print(f"Total test case count: {len(content_list)}")
-print(f"correctly detected numbers: {len(passed_test_cases_true_positive)}")
-print(f"correctly detected non numbers: {len(passed_test_cases_true_negative)}")
+print(f"correctly detected numbers: {len(passed_test_cases_true_positive)}, {passed_test_cases_true_positive}")
+print(f"correctly detected non numbers: {len(passed_test_cases_true_negative)}, {passed_test_cases_true_negative}")
 print(f"wrongly detected non numbers: {len(failed_test_cases_false_negative)}, {failed_test_cases_false_negative}")
 print(f"wrongly detected numbers: {len(failed_test_cases_false_positive)}, {failed_test_cases_false_positive}")
 
