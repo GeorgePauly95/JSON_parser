@@ -1,6 +1,26 @@
 import re
 
 def parse_number(input_string):
+    """
+        >>> parse_number("0.7649+33") is None
+        True
+        >>> parse_number("0.9881")
+        (0.9881, '')
+        >>> parse_number("0e+1")
+        (0.0, '')
+        >>> parse_number("1.e03") is None
+        True
+        >>> parse_number("103380")
+        (103380, '')
+        >>> parse_number("1070.0")
+        (1070.0, '')
+        >>> parse_number("107Ee6") is None
+        True
+        >>> parse_number("10923E+5")
+        (1092300000.0, '')
+        >>> parse_number("1E53.4190") is None
+        True
+    """
     scientific_float_pattern = "^[-]?(([1-9]([0-9]+)?[.][0-9]+(e|E)[-+]?[0-9]+)|([1-9][0-9]*(e|E)[-+]?[0-9]+)|(0[.][0-9]+(e|E)[-+]?[0-9]+)|(0(e|E)[-+]?[0-9]+))$"
     data = re.search(scientific_float_pattern,input_string)
     if data is not None:
@@ -25,7 +45,7 @@ def parse_number(input_string):
             else:
                 return "None"
 #Testing with >60k cases
-
+print(parse_number("0.7649+33"))
 #Preparation for Testing and initialization of Variables
 f = open('numbertests.txt', 'r')
 content = f.read()
@@ -47,6 +67,7 @@ for x in content_list:
         failed_test_cases_false_negative.append(x_list[0])
     elif parse_number(x_list[0]) != "None" and x_list[1] == "true":
         passed_test_cases_true_positive.append(x_list[0])
+
 #Checking the Results
 print(f"Total test case count: {len(content_list)}")
 print(f"correctly detected numbers: {len(passed_test_cases_true_positive)}, {passed_test_cases_true_positive}")
