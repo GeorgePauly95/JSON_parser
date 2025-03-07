@@ -56,7 +56,7 @@ def parse_string(input_string):
 # print(f"Issues with json lib encoding: {json_lib_unicode_error_count}")
 
 
-#Testing the function against test cases
+
 # Checking >90K test cases for valid and invalid strings each.
 
 # count_none = 0 # should be 0 for the entire positive string test case
