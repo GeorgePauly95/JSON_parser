@@ -62,4 +62,3 @@ str_3 = '[  true  , false] ["rest"]'
 str_4 = '[ ] rest'
 str_5 = '[true,[false],12] rest'
 str_6 ='[[],[]] rest'
-
