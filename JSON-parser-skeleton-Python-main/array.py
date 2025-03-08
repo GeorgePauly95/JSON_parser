@@ -4,7 +4,6 @@ from number import parse_number
 from str1ng import parse_string
 
 
-
 def parse_array(input_string):
     '''
     >>> parse_array('[,1,2,3,4,5] rest') is None
@@ -62,4 +61,7 @@ def parse_array(input_string):
             break
         return None
     return output_array, input_string[1:]
-print(parse_array('[[[ [1,2,3,4,5], true, null ,23e-2]],"george", false , 2E2, [1.5,2,true,1234567,[1,2,3,4,5]]] rest'))
+arr_1 = '[[[ [1,2,3,4,5], true, null ,23e-2]],"george", false , 2E2, [1.5,2,true,1234567,[1,2,3,4,5]]] rest'
+arr_2 = '[1,2,3,george]'
+# print(parse_array(arr_2))
+
