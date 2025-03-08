@@ -3,7 +3,7 @@ import json
 from ast import parse
 
 #reading test case files
-f = open("positive_string_tests.txt", "r")
+f = open("negative_string_tests.txt", "r")
 content = f.read()
 content_list = list(content.split('\n'))
 
@@ -28,7 +28,7 @@ def parse_string(input_string):
         return output, input_string[len(data[0]):]
     return None
 
-# n = len(content_list)
+
 
 # Testing the function against python's json library
 # Initializing correctness tracking variables
@@ -38,6 +38,7 @@ def parse_string(input_string):
 # json_lib_unicode_error_count = 0
 # unknown_json_lib_decode_error_count = 0
 # backslash_count = 0
+n = len(content_list)
 # for i in range(n):
 #     try:
 #         if json.loads(content_list[i]) == parse_string(content_list[i]):
@@ -67,15 +68,15 @@ def parse_string(input_string):
 #         if parse_string(content_list[i]) is None:
 #             count_none += 1
 #             #print("line no.", i+1, "detected correct", content_list[i])# (for negative test case)
-#             print("line no." ,i+1, "is detected wrong", parse_string(content_list[i]), content_list[i])# (for positive test case)
+#             #print("line no." ,i+1, "is detected wrong", parse_string(content_list[i]), content_list[i])# (for positive test case)
 #         else:
 #             count_non_none +=1
-#             #print(f"line no.", i+1, "detected wrong", parse_string(content_list[i]))# (for negative test case)
-#             print("line no." ,i+1, "is detected correct", parse_string(content_list[i]))# (for positive test case)
+#             print(f"line no.", i+1, "detected wrong", parse_string(content_list[i]))# (for negative test case)
+#             #print("line no." ,i+1, "is detected correct", parse_string(content_list[i]))# (for positive test case)
 #     except UnicodeEncodeError:
 #         print("unicode error on line no:", i+1)
 #         unicode_error_count += 1
-
+#
 # print(f"None Counts: {count_none}")
 # print(f"Non None Counts: {count_non_none}")
 # print(unicode_error_count)
