@@ -27,30 +27,30 @@ def parse_array(input_string):
     while input_string[0] != "]":
         input_string = input_string.lstrip(" ")
 
-        # if parse_null(input_string) is not None:
-        #     parsed_null = parse_null(input_string)
-        #     output_array.append(parsed_null[0])
-        #     input_string = parsed_null[1]
-        # elif parse_bool(input_string) is not None:
-        #     parsed_bool = parse_bool(input_string)
-        #     output_array.append(parsed_bool[0])
-        #     input_string = parsed_bool[1]
-        # elif parse_number(input_string) is not None:
-        #     parsed_number = parse_number(input_string)
-        #     output_array.append(parsed_number[0])
-        #     input_string = parsed_number[1]
-        # elif parse_string(input_string) is not None:
-        #     parsed_string = parse_string(input_string)
-        #     output_array.append(parsed_string[0])
-        #     input_string = parsed_string[1]
-        # elif parse_array(input_string) is not None:
-        #     parsed_array = parse_array(input_string)
-        #     output_array.append(parsed_array[0])
-        #     input_string = parsed_array[1]
-        # elif parse_object(input_string) is not None:
-        #     parsed_object = parse_object(input_string)
-        #     output_array.append(parsed_object[0])
-        #     input_string = parsed_object[1]
+        if parse_null(input_string) is not None:
+            parsed_null = parse_null(input_string)
+            output_array.append(parsed_null[0])
+            input_string = parsed_null[1]
+        elif parse_bool(input_string) is not None:
+            parsed_bool = parse_bool(input_string)
+            output_array.append(parsed_bool[0])
+            input_string = parsed_bool[1]
+        elif parse_number(input_string) is not None:
+            parsed_number = parse_number(input_string)
+            output_array.append(parsed_number[0])
+            input_string = parsed_number[1]
+        elif parse_string(input_string) is not None:
+            parsed_string = parse_string(input_string)
+            output_array.append(parsed_string[0])
+            input_string = parsed_string[1]
+        elif parse_array(input_string) is not None:
+            parsed_array = parse_array(input_string)
+            output_array.append(parsed_array[0])
+            input_string = parsed_array[1]
+        elif parse_object(input_string) is not None:
+            parsed_object = parse_object(input_string)
+            output_array.append(parsed_object[0])
+            input_string = parsed_object[1]
 
         input_string = input_string.lstrip(" ")
         if input_string[0] == ",":
