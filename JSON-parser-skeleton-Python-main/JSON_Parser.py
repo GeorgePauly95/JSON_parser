@@ -65,17 +65,6 @@ def parse_array(input_string):
             break
         return None
     return output_array, input_string[1:]
-array_pattern = '[((\s)*[.]+(\s)*,(\s)*)*((\s)*[.]+(\s)*)?]'
-array = [1,2,3,4,5]
-
-
-
-
-
-
-
-
-
 def parse_object(input_string):
     if input_string[0] != "{" or input_string[0:2] == "{,":
         return None
